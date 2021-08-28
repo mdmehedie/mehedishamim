@@ -1,0 +1,130 @@
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600|Maven+Pro";
+
+
+body {
+    font-family: 'Maven Pro', serif;
+}
+
+
+/**********************/
+/*     Navigation     */
+/**********************/
+.navbar {
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+}
+
+.navbar .navbar-brand {
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+}
+
+.navbar .logo-image img {
+    width: 140px;
+    height: 40px;
+}
+
+.navbar .logo-text {
+    color: #000000;
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: .9rem;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.menu-content {
+    color: black;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: inherit;
+}
+
+
+/* -------------- Navigation End --------------- */
+
+
+/* -------------- Footer Start --------------- */
+.link-text ul li a {
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.vid {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.vid iframe,
+.vid object,
+.vid embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.profile {
+    aspect-ratio: auto 540 / 540;
+    max-width: 100%;
+    border-radius: 63% 37% 50% 50%/70% 68% 32% 30%;
+
+
+}
+
+.profile-bg {
+    aspect-ratio: auto 540 / 540;
+    width: 96%;
+    z-index: -1;
+    top: 20px;
+    left: 20%;
+    border-radius: 63% 37% 50% 50%/70% 68% 32% 30%;
+    background-color: #f2f3f3;
+}
+
+//
+//@include media-breakpoint-up(sm) {
+//    .profile {
+//        height: 18rem;
+//    }
+//}
+//
+//@include media-breakpoint-up(md) {
+//    .profile {
+//        height: 22rem;
+//    }
+//}
+//
+//@include media-breakpoint-up(lg) {
+//    .profile {
+//        height: 30rem;
+//    }
+//}
+//
+//@include media-breakpoint-up(xl) {
+//    .profile {
+//        height: 35rem;
+//    }
+//}
+//
+//@include media-breakpoint-up(xxl) {
+//
+//    .profile {
+//        height: 40rem;
+//    }
+//}
