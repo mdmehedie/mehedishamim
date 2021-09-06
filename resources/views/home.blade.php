@@ -1,11 +1,11 @@
 @extends('layout.app')
 
-@section('title',"My Post")
+@section('title',"Mehedi Shamim Personal Site")
 
 @section('content')
 
     <div class="container">
-        <div class="row">
+        <div class="row my-5">
             <div class="col-sm-6 position-relative">
                 <div class="m-5">
                     <img src="{{asset('assets/mehedi_shamin.jpg')}}" class="profile" style="z-index:4;"/>
@@ -14,8 +14,17 @@
                 </div>
             </div>
 
-            <div class="col-sm-6 d-flex flex-column justify-content-center">
-                <h1>Hello</h1>
+            <div class="col-sm-6 d-flex flex-column justify-content-center align-self-stretch flex-grow-1">
+                <h1 class="fw-bolder">Unleash Your Creativity</h1>
+                <p class="lead">This is a theme carefully designed and developed to get the most out of the new WordPress editor. Unleash the power of blocks - an awesome new way of creating rich content in WordPress!</p>
+                
+                <div class="d-flex ">
+                    <button class="btn btn-outline-dark w-25 mr-3">Find Out more</button>
+                    <a href="#" class="pe-3"><i class="fab fa-facebook-square text-dark"></i></a>
+                    <a href="#" class="pe-3"><i class="fab fa-twitter text-dark"></i></a>
+                    <a href="#" class="pe-3"><i class="fab fa-linkedin-in text-dark"></i></a>
+                    <a href="#" class="pe-3"><i class="fas fa-envelope text-dark"></i></a>
+                </div>
             </div>
         </div>
     </div>
@@ -24,13 +33,7 @@
         <a href="#" class="text-decoration-none text-dark">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <div>
-                            <img class="w-100" src="{{asset('assets/header.jpg')}}" alt=""/>
-                        </div>
-                    </div>
                     <div class="col-sm-6 d-flex p-4 flex-column justify-content-center align-self-stretch flex-grow-1">
-
                         <h5 class="text-uppercase text-decoration-underline fw-bold">
                             The future's so bright
                         </h5>
@@ -48,6 +51,13 @@
                             <p class="px-2">|</p>
                             <p class="px-1 ">JULY 11 2021</p>
                         </div>
+                        
+                    </div>
+                    <div class="col-sm-6 ">
+
+                        <div>
+                            <img class="w-100" src="{{asset('assets/header.jpg')}}" alt=""/>
+                        </div>
                        
                     </div>
                 </div>
@@ -55,64 +65,7 @@
         </a>
     </section>
 
-    <section>
-        <div class="container px-2">
-            <div
-                id="carouselExampleIndicators"
-                class="carousel slide"
-                data-ride="carousel"
-            >
-                <ol class="carousel-indicators">
-                    <li
-                        data-target="#carouselExampleIndicators"
-                        data-slide-to="0"
-                        class="active"
-                    ></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img
-                            class="d-block w-100"
-                            src="{{asset('assets/slider-1.jpg')}}"
-                            alt="First slide"
-                        />
-                    </div>
-                    <div class="carousel-item">
-                        <img
-                            class="d-block w-100"
-                            src="{{asset('assets/slider-1.jpg')}}"
-                            alt="Second slide"
-                        />
-                    </div>
-                    <div class="carousel-item">
-                        <img
-                            class="d-block w-100"
-                            src="{{asset('assets/slider-2.jpg')}}"
-                            alt="Third slide"
-                        />
-                    </div>
-                </div>
-                <a
-                    class="carousel-control-prev"
-                    href="#carouselExampleIndicators"
-                    role="button"
-                    data-slide="prev"
-                >
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a
-                    class="carousel-control-next"
-                    href="#carouselExampleIndicators"
-                    role="button"
-                    data-slide="next"
-                >
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
-            </div>
-        </div>
-    </section>
+    
 
     <section class="p-4 bg-dark text-white mt-4">
         <div class="container">
@@ -254,7 +207,7 @@
 
                 <div class="col-sm-3">
                     <div>
-                        <a href="#" class="text-decoration-none text-dark">
+                        <a href="{{route('post')}}" class="text-decoration-none text-dark">
                             <img class="w-100 py-2"
                                  src="{{asset('assets/htacd_2021_how-you-can-help_blogroll_800x494_03.jpg')}}"/>
                             <h6 class="fw-bold" style="font-size: 14px;">This doctor’s life story is almost as

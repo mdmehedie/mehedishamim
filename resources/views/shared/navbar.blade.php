@@ -1,10 +1,10 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light">
-    <div class="container border-bottom border-dark">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white">
+    <div class="container">
 
         <!-- Image Logo -->
         <a class="navbar-brand logo-image pb-2" href="{{route('home')}}">
-            <img src="{{asset('assets/logo.jpg')}}" alt="alternative"/>
+            <img src="{{asset('assets/logo.png')}}" alt="alternative"/>
         </a>
 
         <a class="navbar-brand logo-text" href="{{route('home')}}">
@@ -20,10 +20,7 @@
             <span class="navbar-toggler-icon" style="color: rgb(0, 0, 0)"></span>
         </button>
 
-        <div
-            class="collapse navbar-collapse justify-content-end menu-content"
-            id="navbarNavDropdown"
-        >
+        <div class="collapse navbar-collapse justify-content-end menu-content"id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('about')}}">About Me</a>
@@ -54,11 +51,11 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Watch</a>
+                    <a class="nav-link" href="{{route('video')}}">Watch</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="drawer()" href="#">Menu
-                        <i class="far fa-ellipsis-v text-dark"></i>
+                    <a class="nav-link" onclick="drawer()" href="#">menu
+                        <i class="fas fa-bars "></i>
                     </a>
                 </li>
             </ul>
