@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title',"My Post")
+@section('title',"About Me")
 
 @section('content')
     <div class="experience my-5" id="experience" style="background-color: #4db99a; background-image: url(assets/edgetop01.png),url(assets/edgebottom02.png); background-position: top,bottom; background-repeat:no-repeat, repeat-x,repeat-y;">

@@ -7,6 +7,11 @@
 
 @import "https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600|Maven+Pro";
 
+@media (min-width: 1400px) {
+    .container, .container-xxl {
+        max-width: 1330px;
+    }
+}
 
 body {
     font-family: 'Maven Pro', serif;
@@ -49,7 +54,6 @@ body {
     font-family: sans-serif;
 
 }
-
 
 
 /* -------------- Navigation End --------------- */
@@ -132,7 +136,6 @@ body {
 //}
 
 
-
 /*******************************/
 /******* About CSS ********/
 /*******************************/
@@ -192,20 +195,20 @@ body {
 }
 
 .experience .timeline .timeline-item::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 46px;
-  right: 10px;
-  z-index: 1;
-  border: 10px solid;
-  border-color: transparent transparent transparent #000000;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 46px;
+    right: 10px;
+    z-index: 1;
+    border: 10px solid;
+    border-color: transparent transparent transparent #000000;
 }
 
 .experience .timeline .timeline-item.right::before {
-  left: 10px;
-  border-color: transparent #000000 transparent transparent;
+    left: 10px;
+    border-color: transparent #000000 transparent transparent;
 }
 
 .experience .timeline .timeline-date {
@@ -242,6 +245,7 @@ body {
     border-right: none;
     /* border-left: 5px solid #ffffff; */
 }
+
 .experience .timeline .timeline-item.left .timeline-text {
     border-right: none;
     /* border-left: 5px solid #ffffff; */
@@ -275,27 +279,27 @@ body {
         width: 100%;
         padding-left: 38px;
     }
-    
+
     .experience .timeline .timeline-item.left {
         padding-right: 0;
     }
-    
+
     .experience .timeline .timeline-item.right {
         left: 0%;
         padding-left: 38px;
     }
 
-    .experience .timeline .timeline-item.left::after, 
+    .experience .timeline .timeline-item.left::after,
     .experience .timeline .timeline-item.right::after {
         left: 0;
     }
-    
+
     .experience .timeline .timeline-item.left::before,
     .experience .timeline .timeline-item.right::before {
         left: 18px;
         border-color: transparent #dddddd transparent transparent;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-date,
     .experience .timeline .timeline-item.right .timeline-date {
         position: relative;
@@ -305,11 +309,118 @@ body {
         text-align: left;
         margin-bottom: 10px;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-text,
     .experience .timeline .timeline-item.right .timeline-text {
         border-right: none;
         border-left: 5px solid #dddddd;
     }
 }
+
+
+/******* Drawer Section ********/
+
+.drawer {
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+
+    &.is-visible {
+        .drawer__overlay {
+            opacity: 0.5;
+        }
+
+        .drawer__wrapper {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+
+    .drawer__overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1200;
+        opacity: 0;
+
+        transition: opacity 0.3s;
+        will-change: opacity;
+        background-color: #000;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+
+    .drawer__wrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 420px;
+        z-index: 9999;
+        overflow: auto;
+
+        transition: transform 0.3s;
+        will-change: transform;
+        background-color: #fff;
+
+        display: flex;
+        flex-direction: column;
+
+        -webkit-transform: translate3d(103%, 0, 0);
+        transform: translate3d(103%, 0, 0); /* extra 3% because of box-shadow */
+
+        -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+
+        /* Optional */
+        box-shadow: 0 2px 6px #777;
+
+
+        .drawer__content {
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100%;
+            flex-grow: 1;
+            padding: 1.5rem;
+        }
+
+        .drawer__header {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            background: #343a40;
+            padding: 1rem 1.5rem;
+            justify-content: space-between;
+
+            drawer__title {
+
+            }
+
+            .drawer__close {
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                background-image: url("data:image/svg+xml,%0A%3Csvg width='15px' height='16px' viewBox='0 0 15 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='2.-Menu' transform='translate(-15.000000, -13.000000)' stroke='%23FFFFFF'%3E%3Cg id='Group' transform='translate(15.000000, 13.521000)'%3E%3Cpath d='M0,0.479000129 L15,14.2971819' id='Path-3'%3E%3C/path%3E%3Cpath d='M0,14.7761821 L15,-1.24344979e-14' id='Path-3'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                width: 15px;
+                height: 15px;
+                flex-shrink: 0;
+            }
+        }
+
+    }
+}
+
+
 
