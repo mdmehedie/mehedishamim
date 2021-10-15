@@ -26,7 +26,7 @@
                     <a class="nav-link" href="{{route('about')}}">About Me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Living Library</a>
+                    <a class="nav-link" href="">Living Library</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a
@@ -34,20 +34,31 @@
                         href="#"
                         id="navbarDropdownMenuLink"
                         role="button"
-                        data-bs-toggle="dropdown"
+                        data-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Fiction
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                        <a class="dropdown-item py-3" href="#">Poem <b class="caret"></b></a>
+                        <div class="dropdown-divider m-0"></div>
+                        <a class="dropdown-item py-3" href="#">Short Stories <b class="caret"></b></a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-toggle="dropdown"
                         aria-expanded="false"
                     >
                         Contribution
                     </a>
-                    <ul
-                        class="dropdown-menu"
-                    >
-                        <li>
-                            <a class="dropdown-item" href="#"
-                            >Community <b class="caret"></b
-                                ></a>
-                        </li>
-                    </ul>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                        <a class="dropdown-item py-3" href="#">Community <b class="caret"></b></a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('video')}}">Watch</a>

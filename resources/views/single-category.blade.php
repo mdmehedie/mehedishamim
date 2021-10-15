@@ -48,10 +48,6 @@
                     <h6 class="text-decoration-underline text-uppercase">
                         {{$category->name}}
                     </h6>
-                    <a class="text-decoration-none text-dark"
-                       href="{{route('category.show',['slug'=>$category->slug])}}">
-                        <p>See More <i class="fa fa-long-arrow-right"></i></p>
-                    </a>
                 </div>
 
                 <div class="row">

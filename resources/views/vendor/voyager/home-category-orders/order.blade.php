@@ -33,7 +33,7 @@
                                         </span>
                                             @else
                                                 @php
-                                                    $category=\App\Models\Category::find( $result->{$display_column});
+                                                    $category=  \App\Models\Category::find($result->{$display_column});
                                                 @endphp
                                                 <span>{{ $category->name }}</span>
                                             @endif

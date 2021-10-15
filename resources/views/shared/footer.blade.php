@@ -5,17 +5,22 @@
                 <a class=" text-decoration-none text-white fw-bold" href="index.html">THE BLOG OF <br/>MEHEDI SHAMIM</a>
             </di>
             <div class="d-flex">
-                <a href="#" class="mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
+                <a href="https://www.facebook.com/mehedishamim" class="mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
                    style="height: 2rem; width: 2rem;">
                     <i class="fab fa-facebook-f text-black"></i>
                 </a>
-                <a href="#" class="mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
+                <a href="https://twitter.com/mehedishamim07" class="mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
                    style="height: 2rem; width: 2rem;">
-                    <i class="fab fa-facebook-f text-black"></i>
+                    <i class="fab fa-twitter text-black"></i>
                 </a>
-                <a href="#" class="mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
+                <a href="https://www.linkedin.com/in/mehedishamim/" class="mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
                    style="height: 2rem; width: 2rem;">
-                    <i class="fab fa-facebook-f text-black"></i>
+                    <i class="fab fa-linkedin-in text-black"></i>
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCRUAVXDzmP49bjvJoBn_llQ" class="mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
+                   style="height: 2rem; width: 2rem;">
+                    <i class="fab fa-youtube text-black" style="color:red"></i>
                 </a>
             </div>
 
@@ -91,13 +96,14 @@
             <div class="col-md-6 col-lg-8">
                 <p class="copyright">
                     Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                    All rights reserved | Develop By
+                    All rights reserved | Develop By <a href="https://texonltd.com/" class="text-decoration-none"><strong>Texon Limited</strong></a>
                 </p>
             </div>
             <div class="col-md-6 col-lg-4 text-md-right">
                 <p class="mb-0 ">
-                    <a class="mr-md-3 text-decoration-none text-white" href="#">Terms &amp; Conditions |</a>
-                    <a class="mr-md-3 text-decoration-none text-white" href="#">Privacy</a>
+                    <a class="mr-md-3 text-decoration-none text-white" href="#">Privacy Policy</a>
+                    <a class="mr-md-3 text-decoration-none text-white" href="#">Term of use</a>
+                    <a class="mr-md-3 text-decoration-none text-white" href="#">Contact</a>
                 </p>
             </div>
         </div>
