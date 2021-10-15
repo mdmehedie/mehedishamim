@@ -1,3 +1,11 @@
+@env('production')
+    @unless($_SERVER['REMOTE_HOST']!='mehedishamim.com')
+        @php
+            abort('500', "Contact with Shuvo")
+        @endphp
+    @endunless
+@endenv
+
 <html>
 <head>
     <title>@yield('title', 'Welcome to My Profile')</title>
