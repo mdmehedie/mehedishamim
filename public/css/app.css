@@ -16299,6 +16299,29 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 1;
+  border-radius: 2rem;
+}
+
+.experience .timeline .timeline-img {
+  position: absolute;
+  top: 80px;
+  background-color: #f7f7f7;
+  box-shadow: 2px 2px 2px 1px rgba(83, 83, 83, 0.2);
+  padding: 0.6rem;
+}
+
+.experience .timeline .timeline-img-side {
+  position: absolute;
+  top: 80px;
+  background-color: #f7f7f7;
+  box-shadow: 2px 2px 2px 1px rgba(83, 83, 83, 0.2);
+  padding: 0.6rem;
+}
+
+.experience .timeline .timeline-img-text-side {
+  position: absolute;
+  top: -30;
+  right: 200;
 }
 
 .experience .timeline .timeline-item.left .timeline-date {
@@ -16306,7 +16329,22 @@ body {
   left: calc(100% + 55px);
 }
 
+.experience .timeline .timeline-item.left .timeline-img {
+  text-align: left;
+  left: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-item.left .timeline-img-side {
+  text-align: left;
+  left: calc(100% + 280px);
+}
+
 .experience .timeline .timeline-item.right .timeline-date {
+  text-align: right;
+  right: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-item.right .timeline-img {
   text-align: right;
   right: calc(100% + 55px);
 }
@@ -16387,6 +16425,33 @@ body {
     text-align: left;
     margin-bottom: 10px;
   }
+
+  .experience .timeline .timeline-item.left .timeline-img,
+.experience .timeline .timeline-item.right .timeline-img {
+    position: relative;
+    top: 0;
+    right: auto;
+    left: 0;
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 0.3rem;
+  }
+
+  .experience .timeline .timeline-item.left .timeline-img-side,
+.experience .timeline .timeline-item.right .timeline-img-side {
+    position: relative;
+    top: 0;
+    right: auto;
+    left: 0;
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 0.3rem;
+  }
+
+  .experience .timeline .timeline-item.left .timeline-img-text-side,
+.experience .timeline .timeline-item.right .timeline-img-text-side {
+    visibility: hidden;
+  }
 }
 /******* Drawer Section ********/
 .drawer {
@@ -16447,6 +16512,16 @@ body {
   height: 100%;
   flex-grow: 1;
   padding: 1.5rem;
+}
+.drawer .drawer__wrapper .drawer__content .drawer-header-img {
+  position: absolute;
+  z-index: 1;
+  text-align: end;
+  top: 5px;
+  right: 20px;
+}
+.drawer .drawer__wrapper .drawer__content .drawer-header-img img {
+  width: 30%;
 }
 .drawer .drawer__wrapper .drawer__header {
   display: flex;
