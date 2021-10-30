@@ -4,7 +4,7 @@
         <div class="drawer__header">
             <div class="drawer__title">
                 <a class="text-decoration-none text-white fw-bolder" href="{{route('home')}}">
-                    THE BLOG OF <br/>
+                    THE THOUGHTS OF <br/>
                     MEHEDI SHAMIM
                 </a>
             </div>
@@ -12,9 +12,12 @@
         </div>
 
         <div class="drawer__content">
+                <div class="drawer-header-img">
+                    <img src="{{asset('assets/Mehedi-shamim.png')}}" alt="">
+                </div>
             <section class="mt-3">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
+                    
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img

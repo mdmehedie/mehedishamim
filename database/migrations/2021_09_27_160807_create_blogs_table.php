@@ -15,7 +15,9 @@ class CreateBlogsTable extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id')->constrained()->onDelete('set null');
+            $table->foreignId('category_id');
+
+            
             $table->string('avatar')->nullable();
             $table->string('video')->nullable();
             $table->string('type');
