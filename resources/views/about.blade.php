@@ -66,7 +66,7 @@
         </div>
     </div>
 
-    <div class="experience my-5" id="experience" style="background-color: #4bc1c4; background-image: url(assets/edgetop01.png),url(assets/edgebottom02.png); background-position: top,bottom; background-repeat:no-repeat, repeat-x,repeat-y;">
+    <div class="experience my-5" id="experience" style="background-color: #4bc1c4; background-image: url({{asset('assets/edgetop01.png')}}), url({{asset('assets/edgebottom02.png')}}); background-position: top,bottom; background-repeat:no-repeat, repeat-x,repeat-y;">
         <div class="container ">
             <div class="timeline">
                 <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
@@ -169,7 +169,7 @@
             </div>
         </div>
     </div>
-    <div class="experience my-5" id="experience" style="background-color: #4bc1c4; background-image: url(assets/edgetop01.png),url(assets/edgebottom02.png); background-position: top,bottom; background-repeat:no-repeat, repeat-x,repeat-y;">
+    <div class="experience my-5" id="experience" style="background-color: #4bc1c4; background-image: url({{asset('assets/edgetop02.png')}}), url({{asset('assets/edgebottom01.png')}}); background-position: top,bottom; background-repeat:no-repeat, repeat-x,repeat-y;">
         <div class="container ">
             <div class="timeline">
                 <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
@@ -201,7 +201,7 @@
                 <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
                     <div class="timeline-text">
                         <div class="timeline-date">2015</div>
-                        <img src="{{asset('assets/Team Spice.jpeg')}}" class="timeline-img" width="50%">
+                        <img src="{{asset('assets/Team Spice.jpeg')}}" class="timeline-img" width="280px">
                         <h2>96.4 Spice FM </h2>
                         <h4>Full time Job</h4>
                         <p>
@@ -237,7 +237,7 @@
                     <div class="timeline-text">
                         <div class="timeline-date">2018</div>
                         <img src="{{asset('assets/wife.jpg')}}" class="timeline-img p-0 background-none" width="40%" >
-                        <img src="{{asset('assets/tolpitolpar_golpo.JPG')}}" class="timeline-img-text-side" width="40%" >
+                        <img src="{{asset('assets/tolpitolpar_golpo.JPG')}}" class="timeline-img-text-side" width="220px" >
                         <img src="{{asset('assets/summit.jpeg')}}" class="timeline-img-side p-0 background-none" width="45%">
                         <h2>Tolpitolpar Golpo</h2>
                         <h4>Third Book</h4>
@@ -286,7 +286,7 @@
                 <div class="timeline-item left wow slideInRight" data-wow-delay="0.1s">
                     <div class="timeline-text">
                         <div class="timeline-date">2020</div>
-                        <img src="{{asset('assets/abdul_momen.jpg')}}" class="timeline-img p-0 background-none" width="60%" style="box-shadow: 2px 2px 6px 1px rgba(83, 83, 83, 0.1);" >
+                        <img src="{{asset('assets/abdul_momen.jpg')}}" class="timeline-img p-0 background-none" width="300px" style="box-shadow: 2px 2px 6px 1px rgba(83, 83, 83, 0.1);" >
                         <h2>Abdul Momen Ltd</h2>
                         <h4>Head of Business</h4>
                         <p>
