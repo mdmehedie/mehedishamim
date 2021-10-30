@@ -2,25 +2,29 @@
     <div class="container">
         <div class="py-3 d-flex justify-content-between">
             <di class="">
-                <a class=" text-decoration-none text-white fw-bold" href="index.html">THE BLOG OF <br/>MEHEDI SHAMIM</a>
+                <a class="text-white fw-bold" href="{{url('/')}}">THE THOUGHTS OF <br/>MEHEDI SHAMIM</a>
             </di>
             <div class="d-flex">
-                <a href="https://www.facebook.com/mehedishamim" class="mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
+                <a href="https://www.facebook.com/mehedishamim"
+                   class="text-decoration-none mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
                    style="height: 2rem; width: 2rem;">
                     <i class="fab fa-facebook-f text-black"></i>
                 </a>
-                <a href="https://twitter.com/mehedishamim07" class="mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
-                   style="height: 2rem; width: 2rem;">
-                    <i class="fab fa-twitter text-black"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/mehedishamim/" class="mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
+                <a href="https://www.linkedin.com/in/mehedishamim/"
+                   class="text-decoration-none mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
                    style="height: 2rem; width: 2rem;">
                     <i class="fab fa-linkedin-in text-black"></i>
                 </a>
 
-                <a href="https://www.youtube.com/channel/UCRUAVXDzmP49bjvJoBn_llQ" class="mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
+                <a href="https://www.youtube.com/channel/UCRUAVXDzmP49bjvJoBn_llQ"
+                   class="text-decoration-none mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
                    style="height: 2rem; width: 2rem;">
                     <i class="fab fa-youtube text-black" style="color:red"></i>
+                </a>
+                <a href="https://twitter.com/mehedishamim07"
+                   class="text-decoration-none mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
+                   style="height: 2rem; width: 2rem;">
+                    <i class="fab fa-twitter text-black"></i>
                 </a>
             </div>
 
@@ -30,32 +34,19 @@
                 <div class="row">
                     <div class="col-md-4 mb-md-0 mb-4 link-text">
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-1 d-block">Jeans</a></li>
-                            <li><a href="#" class="py-1 d-block">Jumpers</a></li>
-                            <li><a href="#" class="py-1 d-block">Leather</a></li>
-                            <li><a href="#" class="py-1 d-block">Shorts</a></li>
-                            <li><a href="#" class="py-1 d-block">Boots</a></li>
-                            <li><a href="#" class="py-1 d-block">Watches</a></li>
+                            <li><a href="/category/living-library" class="py-1 d-block">Living Library</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4 mb-md-0 mb-4 link-text">
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-1 d-block">Dresses</a></li>
-                            <li><a href="#" class="py-1 d-block">Jumpsuits</a></li>
-                            <li><a href="#" class="py-1 d-block">Shirts</a></li>
-                            <li><a href="#" class="py-1 d-block">T-shirts</a></li>
-                            <li><a href="#" class="py-1 d-block">Swearshirts</a></li>
-                            <li><a href="#" class="py-1 d-block">Jackets</a></li>
+                            <li><a href="/category/book" class="py-1 d-block">Book</a></li>
+                            <li><a href="/category/poem" class="py-1 d-block">Poem</a></li>
+                            <li><a href="/category/short-stories" class="py-1 d-block">Short Stories</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4 mb-md-0 mb-4 link-text">
                         <ul class="list-unstyled ">
-                            <li><a href="#" class="py-1 d-block">Shirts</a></li>
-                            <li><a href="#" class="py-1 d-block">T-shirts</a></li>
-                            <li><a href="#" class="py-1 d-block">Polos</a></li>
-                            <li><a href="#" class="py-1 d-block">Sweaters</a></li>
-                            <li><a href="#" class="py-1 d-block">Sweatshirts</a></li>
-                            <li><a href="#" class="py-1 d-block">Jackets</a></li>
+                            <li><a href="/category/community-contributions" class="py-1 d-block">Contributions</a></li>
                         </ul>
                     </div>
                 </div>
@@ -63,7 +54,7 @@
             <div class="col-md-6" style="border-left: 1px solid;">
                 <div class="row justify-content-end">
                     <div class="col-md-12 col-lg-11 p-4 px-5">
-                        <h5 class="footer-heading mb-2">Subscribe Us</h5>
+                        <h5 class="footer-heading mb-2">Contact Me</h5>
                         <form>
                             <!-- Name input -->
                             <div class="form-outline mb-3">
@@ -96,7 +87,8 @@
             <div class="col-md-6 col-lg-8">
                 <p class="copyright">
                     Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                    All rights reserved | Develop By <a href="https://texonltd.com/" class="text-decoration-none"><strong>Texon Limited</strong></a>
+                    All rights reserved | Develop By <a href="https://texonltd.com/"
+                                                        class="text-decoration-none"><strong>Texon Limited</strong></a>
                 </p>
             </div>
             <div class="col-md-6 col-lg-4 text-md-right">

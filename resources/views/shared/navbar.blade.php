@@ -3,13 +3,12 @@
     <div class="container">
         <!-- Image Logo -->
         <a class="navbar-brand logo-image pb-2" href="{{route('home')}}">
-            <img class="img-fluid" src="{{asset('assets/logo.png')}}" alt="alternative"/>
+            <img class="img-fluid" src="{{asset('assets/logo.jpg')}}" alt="alternative"/>
         </a>
 
         <a class="navbar-brand logo-text d-none d-lg-flex" href="{{route('home')}}">
             <div class="d-flex flex-column">
-                <span>  THE BLOG OF</span>
-                <span>MEHEDI SHAMIM</span>
+                <span style="font-size: 11px;">THE THOUGHTS OF <br> MEHEDI SHAMIM</span>
             </div>
         </a>
 
@@ -21,13 +20,16 @@
 
         <div class="collapse navbar-collapse justify-content-end menu-content" id="navbarSupportedContent"
              aria-labelledby="navbarToggle">
+
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('about')}}">About Me</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="">Living Library</a>
+                    <a class="nav-link" href="/category/living-library">Living Library</a>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a
                         class="nav-link dropdown-toggle"
@@ -39,12 +41,17 @@
                     >
                         Fiction
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                        <a class="dropdown-item py-3" href="#">Poem <b class="caret"></b></a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item py-3" href="/category/book">Book</a>
+
                         <div class="dropdown-divider m-0"></div>
-                        <a class="dropdown-item py-3" href="#">Short Stories <b class="caret"></b></a>
+                        <a class="dropdown-item py-3" href="/category/poem">Poem</a>
+                        <div class="dropdown-divider m-0"></div>
+                        <a class="dropdown-item py-3" href="/category/short-stories">Short Stories</a>
                     </div>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a
                         class="nav-link dropdown-toggle"
@@ -56,15 +63,19 @@
                     >
                         Contribution
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                        <a class="dropdown-item py-3" href="#">Community <b class="caret"></b></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item py-3" href="/category/community-contribution">Community <b
+                                class="caret"></b></a>
                     </div>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('video')}}">Watch</a>
                 </li>
+
                 <li class="nav-item">
-                    <a href="javascript:void(0)" class="btn btn-sm" data-drawer-trigger aria-controls="drawer-name" aria-expanded="false">
+                    <a href="javascript:void(0)" class="btn btn-sm" data-drawer-trigger aria-controls="drawer-name"
+                       aria-expanded="false">
                         <i class="fas fa-bars "></i> Menu
                     </a>
                 </li>

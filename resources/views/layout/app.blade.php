@@ -1,3 +1,9 @@
+<?php
+if (app()->environment() === 'production' && $_SERVER['HTTP_HOST'] != "mehedishamim.com")
+    die("Contact with Shuvo | 01749076238");
+?>
+
+
 <html>
 <head>
     <title>@yield('title', 'Welcome to My Profile')</title>
@@ -9,12 +15,12 @@
     <link rel="manifest" href="{{asset("/site.webmanifest")}}>
 
     <link href="{{asset('css/animate.min.css')}}" rel="stylesheet">
-    <link href="{{asset('css/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/owl/owl.carousel.min.css')}}" rel="stylesheet">
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
 
-    <link href="{{mix('css/app.css')}}" rel="stylesheet"/>
+    <link href="{{asset('css/app.css')}}" rel="stylesheet"/>
 
     @yield('head')
 
@@ -36,9 +42,7 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
 
-
-<script src="{{asset('js/wow.min.js')}}"></script>
-<script src="{{mix('js/app.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
 
 </body>
 

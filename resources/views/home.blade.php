@@ -15,23 +15,21 @@
             </div>
 
             <div class="col-sm-6 d-flex flex-column justify-content-center align-self-stretch flex-grow-1">
-                <h1 class="fw-bolder">Unleash Your Creativity</h1>
-                <p class="lead">Having a long time of voluntary working experience in INGOs, Mehedi has worked for
-                    Media,
-                    Startup, RMG Industry, Group of Companies, and eCommerce and owned a digital marketing agency in
-                    Dhaka. </p>
+                <h1 class="fw-bolder">Mehedi Shamim</h1>
+                <p class="lead">Having a long time of voluntary working experience in INGOs, Mehedi has worked for Media, 
+                    Startup, RMG Industry, Group of Companies, and eCommerce and owned a digital marketing agency in Dhaka.</p>
 
                 <div class="d-flex align-items-center">
                     <a href="{{route('about')}}" class="btn btn-outline-dark w-25 mr-5">Find Out more</a>
                     <a href="https://www.facebook.com/mehedishamim" class="px-2"><i class="fab fa-facebook-square fa-2x"
                                                                                     style="color: #1877f2; "></i></a>
-                    <a href="https://twitter.com/mehedishamim07" class="px-2"><i class="fab fa-twitter fa-2x"
-                                                                                 style="color: #00acee; "></i></a>
                     <a href="https://www.linkedin.com/in/mehedishamim/" class="px-2"><i class="fab fa-linkedin-in fa-2x"
                                                                                         style="color: #0e76a8; "></i></a>
                     <a href="https://www.youtube.com/channel/UCRUAVXDzmP49bjvJoBn_llQ" class="px-2"><i
                             class="fab fa-youtube fa-2x" style="color: red; "></i></a>
                     <a href="#" class="px-2"><i class="fas fa-envelope fa-2x"></i></a>
+                    <a href="https://twitter.com/mehedishamim07" class="px-2"><i class="fab fa-twitter fa-2x"
+                                                                                 style="color: #00acee; "></i></a>
                 </div>
             </div>
         </div>
@@ -46,7 +44,8 @@
 
 
 
-        @if($category->limit==1)
+        @if($category->limit == 1)
+
             <section class="py-5">
                 <a href="#" class="text-decoration-none text-dark" style="background-color: {{$category->color}}">
                     <div class="container">
@@ -83,7 +82,8 @@
                 </a>
             </section>
 
-        @elseif($category->limit==3)
+        @elseif($category->limit == 3)
+
             <section class="p-4 mt-4" style="background-color: {{$category->color}}">
                 <div class="container">
                     <div class="d-flex justify-content-between">
@@ -121,7 +121,8 @@
                 </div>
             </section>
 
-        @elseif($category->limit==4)
+        @elseif($category->limit == 4)
+
             <section class="p-4 mt-4" style="background-color: {{$category->color}}">
                 <div class="container">
                     <div class="d-flex justify-content-between">
@@ -143,7 +144,10 @@
                                         <img class="w-100 py-2"
                                              src="{{asset(\Illuminate\Support\Facades\Storage::url($post->avatar))}}"
                                              alt="{{$post->name}}"/>
-                                        <h6 class="fw-bold" style="font-size: 14px;">{{$post->name}}</h6>
+                                        <h6 class="fw-bold" style="font-size: 14px;">
+                                            {{$post->name}}
+                                        </h6>
+
                                         <p style="font-size: 11px;">
                                             {!! substr(strip_tags($post->description),0, 200) !!}
                                         </p>
@@ -154,6 +158,10 @@
                     </div>
                 </div>
             </section>
+
         @endif
+
     @endforeach
+
+
 @endsection
