@@ -67,8 +67,8 @@ return [
     */
 
     'links' => [
-        public_path('media') => storage_path('app/public'),
-       // public_path('../public_html/media') => storage_path('app/public'),
+        //public_path('media') => storage_path('app/public'),
+        public_path('/home/tailydcr/public_html/mehedishamim/media') => storage_path('app/public'),
     ],
 
 ];
