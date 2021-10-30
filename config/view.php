@@ -29,8 +29,7 @@ return [
     */
 
     'compiled' => env(
-        'VIEW_COMPILED_PATH',
-        realpath("templates")
+        'VIEW_COMPILED_PATH', __DIR__ . ("/../templates")
     ),
 
 ];

@@ -46,7 +46,8 @@
 
 
 
-        @if($category->limit==1)
+        @if($category->limit == 1)
+
             <section class="py-5">
                 <a href="#" class="text-decoration-none text-dark" style="background-color: {{$category->color}}">
                     <div class="container">
@@ -83,7 +84,8 @@
                 </a>
             </section>
 
-        @elseif($category->limit==3)
+        @elseif($category->limit == 3)
+
             <section class="p-4 mt-4" style="background-color: {{$category->color}}">
                 <div class="container">
                     <div class="d-flex justify-content-between">
@@ -121,7 +123,8 @@
                 </div>
             </section>
 
-        @elseif($category->limit==4)
+        @elseif($category->limit == 4)
+
             <section class="p-4 mt-4" style="background-color: {{$category->color}}">
                 <div class="container">
                     <div class="d-flex justify-content-between">
@@ -143,7 +146,10 @@
                                         <img class="w-100 py-2"
                                              src="{{asset(\Illuminate\Support\Facades\Storage::url($post->avatar))}}"
                                              alt="{{$post->name}}"/>
-                                        <h6 class="fw-bold" style="font-size: 14px;">{{$post->name}}</h6>
+                                        <h6 class="fw-bold" style="font-size: 14px;">
+                                            {{$post->name}}
+                                        </h6>
+
                                         <p style="font-size: 11px;">
                                             {!! substr(strip_tags($post->description),0, 200) !!}
                                         </p>
@@ -154,6 +160,10 @@
                     </div>
                 </div>
             </section>
+
         @endif
+
     @endforeach
+
+
 @endsection

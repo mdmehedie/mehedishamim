@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('', [HomeController::class, 'index'])->name('home');
 Route::view('post', 'post')->name('post');
 Route::get('video', [VideoController::class, 'index'])->name('video');
