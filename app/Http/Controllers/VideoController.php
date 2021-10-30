@@ -23,6 +23,6 @@ class VideoController extends Controller
         $videoPosts = Blog::where('type', 'video')->get()->groupBy('category_id');
 
 
-        return response()->view('video', compact('video', 'relatedVideos', 'videoPosts'));
+        return view('video', compact('video', 'relatedVideos', 'videoPosts'));
     }
 }
