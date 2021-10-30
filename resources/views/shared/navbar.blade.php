@@ -8,8 +8,7 @@
 
         <a class="navbar-brand logo-text d-none d-lg-flex" href="{{route('home')}}">
             <div class="d-flex flex-column">
-                <span>  THE BLOG OF</span>
-                <span>MEHEDI SHAMIM</span>
+                <span style="font-size: 11px;">THE THOUGHTS OF <br> MEHEDI SHAMIM</span>
             </div>
         </a>
 
@@ -28,7 +27,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="">Living Library</a>
+                    <a class="nav-link" href="/category/living-library">Living Library</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -42,10 +41,14 @@
                     >
                         Fiction
                     </a>
+
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item py-3" href="#">Poem <b class="caret"></b></a>
+                        <a class="dropdown-item py-3" href="/category/book">Book</a>
+
                         <div class="dropdown-divider m-0"></div>
-                        <a class="dropdown-item py-3" href="#">Short Stories <b class="caret"></b></a>
+                        <a class="dropdown-item py-3" href="/category/poem">Poem</a>
+                        <div class="dropdown-divider m-0"></div>
+                        <a class="dropdown-item py-3" href="/category/short-stories">Short Stories</a>
                     </div>
                 </li>
 
@@ -61,7 +64,8 @@
                         Contribution
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item py-3" href="#">Community <b class="caret"></b></a>
+                        <a class="dropdown-item py-3" href="/category/community-contribution">Community <b
+                                class="caret"></b></a>
                     </div>
                 </li>
 

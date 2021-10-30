@@ -11,21 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public_html/static/js');
-mix.sass('resources/scss/app.scss', 'public_html/static/css');
-
-mix.copy(
-    'node_modules/@fortawesome/fontawesome-free/webfonts',
-    'public_html/static/webfonts'
-);
-
-mix.copy(
-    'node_modules/owl.carousel/dist/assets',
-    'public_html/static/css/owl'
-);
-
-
-
-
-
-mix.copy('resources/assets', 'public_html/static/assets');
+mix.js('resources/js/app.js', 'public/static/js')
+    .sass('resources/scss/app.scss', 'public/static/css')
+    .copy(
+        'node_modules/@fortawesome/fontawesome-free/webfonts',
+        'public/static/webfonts'
+    )
+    .copy(
+        'node_modules/owl.carousel/dist/assets',
+        'public/static/css/owl'
+    )
+    .copy('resources/assets', 'public/static/assets');

@@ -13,23 +13,21 @@
             </div>
 
             <div class="col-sm-6 d-flex flex-column justify-content-center align-self-stretch flex-grow-1">
-                <h1 class="fw-bolder">Unleash Your Creativity</h1>
-                <p class="lead">Having a long time of voluntary working experience in INGOs, Mehedi has worked for
-                    Media,
-                    Startup, RMG Industry, Group of Companies, and eCommerce and owned a digital marketing agency in
-                    Dhaka. </p>
+                <h1 class="fw-bolder">Mehedi Shamim</h1>
+                <p class="lead">Having a long time of voluntary working experience in INGOs, Mehedi has worked for Media, 
+                    Startup, RMG Industry, Group of Companies, and eCommerce and owned a digital marketing agency in Dhaka.</p>
 
                 <div class="d-flex align-items-center">
                     <a href="<?php echo e(route('about')); ?>" class="btn btn-outline-dark w-25 mr-5">Find Out more</a>
                     <a href="https://www.facebook.com/mehedishamim" class="px-2"><i class="fab fa-facebook-square fa-2x"
                                                                                     style="color: #1877f2; "></i></a>
-                    <a href="https://twitter.com/mehedishamim07" class="px-2"><i class="fab fa-twitter fa-2x"
-                                                                                 style="color: #00acee; "></i></a>
                     <a href="https://www.linkedin.com/in/mehedishamim/" class="px-2"><i class="fab fa-linkedin-in fa-2x"
                                                                                         style="color: #0e76a8; "></i></a>
                     <a href="https://www.youtube.com/channel/UCRUAVXDzmP49bjvJoBn_llQ" class="px-2"><i
                             class="fab fa-youtube fa-2x" style="color: red; "></i></a>
                     <a href="#" class="px-2"><i class="fas fa-envelope fa-2x"></i></a>
+                    <a href="https://twitter.com/mehedishamim07" class="px-2"><i class="fab fa-twitter fa-2x"
+                                                                                 style="color: #00acee; "></i></a>
                 </div>
             </div>
         </div>
