@@ -226,13 +226,15 @@ body {
 .experience .timeline .timeline-img{
     position: absolute;
     top: 80px;
+    height: 80%;
     background-color: rgb(247, 247, 247);
     box-shadow: 2px 2px 2px 1px rgba(83, 83, 83, 0.2);
-    padding: .6rem;
+    padding: .4rem;
 }
 .experience .timeline .timeline-img-side{
     position: absolute;
     top: 80px;
+    height: 80%;
     background-color: rgb(247, 247, 247);
     box-shadow: 2px 2px 2px 1px rgba(83, 83, 83, 0.2);
     padding: .6rem;
@@ -242,6 +244,7 @@ body {
     position: absolute;
     top: -30;
     right: 200;
+    height: 70%;
 }
 
 .experience .timeline .timeline-item.left .timeline-date {
@@ -305,6 +308,34 @@ body {
     font-size: 16px;
 }
 
+
+@media (max-width: 1199px) {
+    .experience .timeline .timeline-item.left .timeline-img-side {
+        text-align: left;
+        left: calc(100% + 210px);
+    }
+    .experience .timeline .timeline-img{
+        position: absolute;
+        top: 80px;
+        height: 50%;
+        background-color: rgb(247, 247, 247);
+        box-shadow: 2px 2px 2px 1px rgba(83, 83, 83, 0.2);
+        padding: .4rem;
+    }
+    .experience .timeline .timeline-img-side{
+        position: absolute;
+        top: 80px;
+        height: 50%;
+        background-color: rgb(247, 247, 247);
+        box-shadow: 2px 2px 2px 1px rgba(83, 83, 83, 0.2);
+        padding: .4rem;
+    }
+
+    .experience .timeline .timeline-img-text-side{
+        visibility: hidden;
+    }
+}
+
 @media (max-width: 767.98px) {
     .experience .timeline::after {
         left: 8px;
@@ -345,12 +376,13 @@ body {
         text-align: left;
         margin-bottom: 10px;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-img,
     .experience .timeline .timeline-item.right .timeline-img {
         position: relative;
         top: 0;
-        right: auto;
+        right: 0;
+        height: 20%;
         left: 0;
         text-align: left;
         margin-bottom: 10px;
@@ -360,8 +392,8 @@ body {
     .experience .timeline .timeline-item.right .timeline-img-side {
         position: relative;
         top: 0;
-        right: auto;
-        left: 0;
+        left: 0 !important;
+        height: 18%;
         text-align: left;
         margin-bottom: 10px;
         padding: 0.3rem;
@@ -372,7 +404,6 @@ body {
     }
 
 }
-
 
 /******* Drawer Section ********/
 
