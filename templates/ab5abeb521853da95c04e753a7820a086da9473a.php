@@ -2,11 +2,11 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white">
     <div class="container">
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image pb-2" href="{{route('home')}}">
-            <img class="img-fluid" src="{{asset('assets/logo.png')}}" alt="alternative"/>
+        <a class="navbar-brand logo-image pb-2" href="<?php echo e(route('home')); ?>">
+            <img class="img-fluid" src="<?php echo e(asset('assets/logo.png')); ?>" alt="alternative"/>
         </a>
 
-        <a class="navbar-brand logo-text d-none d-lg-flex" href="{{route('home')}}">
+        <a class="navbar-brand logo-text d-none d-lg-flex" href="<?php echo e(route('home')); ?>">
             <div class="d-flex flex-column">
                 <span style="font-size: 11px;">THE THOUGHTS OF <br> MEHEDI SHAMIM</span>
             </div>
@@ -23,7 +23,7 @@
 
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('about')}}">About Me</a>
+                    <a class="nav-link" href="<?php echo e(route('about')); ?>">About Me</a>
                 </li>
 
                 <li class="nav-item">
@@ -70,7 +70,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('video')}}">Watch</a>
+                    <a class="nav-link" href="<?php echo e(route('video')); ?>">Watch</a>
                 </li>
 
                 <li class="nav-item">
@@ -84,3 +84,4 @@
         <!-- end of navbar-collapse -->
     </div>
 </nav>
+<?php /**PATH D:\TEXON\Project\mehedishamim\resources\views/shared/navbar.blade.php ENDPATH**/ ?>
