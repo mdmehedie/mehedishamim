@@ -139,6 +139,14 @@ body {
 /*******************************/
 /******* About CSS ********/
 /*******************************/
+.about-header{
+    display:flex;
+    align-items: end;
+}
+.header-images img{
+    top:0; 
+    right:0;
+}
 .experience {
     position: relative;
     padding: 45px 0 15px 0;
@@ -147,6 +155,9 @@ body {
 .experience .timeline {
     position: relative;
     width: 100%;
+}
+.experience-bg-w.experience  .timeline::after {
+    background: #ffffff;
 }
 
 .experience .timeline::after {
@@ -177,6 +188,10 @@ body {
     padding-left: 30px;
 }
 
+.experience-bg-w.experience .timeline .timeline-item::after {
+    background: #ffffff;
+}
+
 .experience .timeline .timeline-item::after {
     content: '';
     position: absolute;
@@ -193,6 +208,9 @@ body {
 .experience .timeline .timeline-item.right::after {
     left: -5px;
 }
+.experience-bg-w.experience .timeline .timeline-item::before {
+    border-color: transparent transparent transparent #ffffff;
+}
 
 .experience .timeline .timeline-item::before {
     content: '';
@@ -206,11 +224,18 @@ body {
     border-color: transparent transparent transparent #000000;
 }
 
+.experience-bg-w.experience .timeline .timeline-item.right::before {
+    border-color: transparent #ffffff transparent transparent;
+}
+
 .experience .timeline .timeline-item.right::before {
     left: 10px;
     border-color: transparent #000000 transparent transparent;
 }
 
+.experience-bg-w.experience .timeline .timeline-date {
+    color: rgb(255, 255, 255);
+}
 .experience .timeline .timeline-date {
     position: absolute;
     width: 100%;
@@ -310,6 +335,9 @@ body {
 
 
 @media (max-width: 1199px) {
+    .header-images img{
+        height: 100%;
+    }
     .experience .timeline .timeline-item.left .timeline-img-side {
         text-align: left;
         left: calc(100% + 210px);
@@ -337,6 +365,9 @@ body {
 }
 
 @media (max-width: 767.98px) {
+    .about-header{
+        flex-direction: column;
+    }
     .experience .timeline::after {
         left: 8px;
     }

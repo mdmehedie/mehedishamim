@@ -14,4 +14,4 @@ yarn-error.log
 composer.lock
 package-lock.json
 public_html
-
+config/filesystems.php
