@@ -3,7 +3,7 @@
     <div class="container">
         <!-- Image Logo -->
         <a class="navbar-brand logo-image pb-2" href="<?php echo e(route('home')); ?>">
-            <img class="img-fluid" src="<?php echo e(asset('assets/logo.jpg')); ?>" alt="alternative"/>
+            <img class="img-fluid" src="<?php echo e(asset('assets/logo.png')); ?>" alt="alternative"/>
         </a>
 
         <a class="navbar-brand logo-text d-none d-lg-flex" href="<?php echo e(route('home')); ?>">
