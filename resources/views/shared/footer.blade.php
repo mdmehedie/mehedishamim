@@ -1,9 +1,9 @@
 <footer class="bg-dark text-light pt-4">
     <div class="container">
         <div class="py-3 d-flex justify-content-between">
-            <di class="">
+            <div class="">
                 <a class="text-white fw-bold" href="{{url('/')}}">THE THOUGHTS OF <br/>MEHEDI SHAMIM</a>
-            </di>
+            </div>
             <div class="d-flex">
                 <a href="https://www.facebook.com/mehedishamim"
                    class="text-decoration-none mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
@@ -55,25 +55,46 @@
                 <div class="row justify-content-end">
                     <div class="col-md-12 col-lg-11 p-4 px-5">
                         <h5 class="footer-heading mb-2">Contact Me</h5>
-                        <form>
+                        <form action="{{route('mailsender')}}" method="POST">
+
+                            @csrf
                             <!-- Name input -->
                             <div class="form-outline mb-3">
                                 <input type="text" id="form4Example1"
+                                name="name"
                                        class="form-control form-control-sm bg-dark text-white"
                                        placeholder="Your Full Name"/>
+
+                                    @error('name')
+                                    <div class="help-block">{{$message}}</div>
+
+                                    @enderror
                             </div>
 
                             <!-- Email input -->
                             <div class="form-outline mb-3">
                                 <input type="email" id="form4Example2"
+                                name="from"
                                        class="form-control form-control-sm bg-dark text-white" placeholder="Your Mail"/>
-                            </div>
+                            
+                                       
+                                    @error('from')
+                                    <div class="help-block">{{$message}}</div>
+
+                                    @enderror
+                                    </div>
 
                             <!-- Message input -->
                             <div class="form-outline mb-3">
-                                <textarea class="form-control form-control-sm bg-dark text-white" id="form4Example3"
+                                <textarea name="body" class="form-control form-control-sm bg-dark text-white" id="form4Example3"
                                           rows="4" placeholder="Message"></textarea>
-                            </div>
+                           
+                           
+                                          @error('body')
+                                          <div class="help-block">{{$message}}</div>
+      
+                                          @enderror
+                                                     </div>
 
                             <!-- Submit button -->
                             <button type="submit" class="btn btn-outline-light btn-sm btn-block mb-3 w-100">Send
