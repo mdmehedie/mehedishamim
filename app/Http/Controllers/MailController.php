@@ -18,10 +18,12 @@ class MailController extends Controller
         'body'    =>'required'       
         ]);
 
+$message = "Name : {$request->name} \nEmail : {$request->from} \nBody :  {$request->body}";
 
-        Mail::raw($request->body, function ($message) use ($request) {
-            $message->from($request->from, $request->name);
-            $message->to("shuvo.punam@gmail.com");
+        Mail::raw($message, function ($message) use ($request) {
+            $message->from("contact@mehedishamim.com", "WebSite");
+            $message->to("mehedishamim@gmail.com");
+            // $message->to("shuvo.punam@gmail.com");
             $message->subject('Mail from Website');
         });
 

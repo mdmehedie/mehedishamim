@@ -1,9 +1,9 @@
 <footer class="bg-dark text-light pt-4">
     <div class="container">
         <div class="py-3 d-flex justify-content-between">
-            <di class="">
+            <div class="">
                 <a class="text-white fw-bold" href="<?php echo e(url('/')); ?>">THE THOUGHTS OF <br/>MEHEDI SHAMIM</a>
-            </di>
+            </div>
             <div class="d-flex">
                 <a href="https://www.facebook.com/mehedishamim"
                    class="text-decoration-none mx-2 bg-light rounded-circle d-flex justify-content-center align-items-center"
@@ -55,25 +55,67 @@
                 <div class="row justify-content-end">
                     <div class="col-md-12 col-lg-11 p-4 px-5">
                         <h5 class="footer-heading mb-2">Contact Me</h5>
-                        <form>
+                        <form action="<?php echo e(route('mailsender')); ?>" method="POST">
+
+                            <?php echo csrf_field(); ?>
                             <!-- Name input -->
                             <div class="form-outline mb-3">
                                 <input type="text" id="form4Example1"
+                                name="name"
                                        class="form-control form-control-sm bg-dark text-white"
                                        placeholder="Your Full Name"/>
+
+                                    <?php $__errorArgs = ['name'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                    <div class="help-block"><?php echo e($message); ?></div>
+
+                                    <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
                             </div>
 
                             <!-- Email input -->
                             <div class="form-outline mb-3">
                                 <input type="email" id="form4Example2"
+                                name="from"
                                        class="form-control form-control-sm bg-dark text-white" placeholder="Your Mail"/>
-                            </div>
+                            
+                                       
+                                    <?php $__errorArgs = ['from'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                    <div class="help-block"><?php echo e($message); ?></div>
+
+                                    <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                                    </div>
 
                             <!-- Message input -->
                             <div class="form-outline mb-3">
-                                <textarea class="form-control form-control-sm bg-dark text-white" id="form4Example3"
+                                <textarea name="body" class="form-control form-control-sm bg-dark text-white" id="form4Example3"
                                           rows="4" placeholder="Message"></textarea>
-                            </div>
+                           
+                           
+                                          <?php $__errorArgs = ['body'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                          <div class="help-block"><?php echo e($message); ?></div>
+      
+                                          <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                                                     </div>
 
                             <!-- Submit button -->
                             <button type="submit" class="btn btn-outline-light btn-sm btn-block mb-3 w-100">Send
