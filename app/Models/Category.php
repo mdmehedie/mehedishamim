@@ -9,7 +9,6 @@ class Category extends Model
 
     public function posts()
     {
-        return $this->hasMany(Blog::class)->orderBy('order')->limit($this->attributes['limit']);
+        return $this->hasMany(Blog::class)->orderBy('order');
     }
-
 }

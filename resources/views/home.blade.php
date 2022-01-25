@@ -41,7 +41,9 @@
 
     @foreach ($homeCategory as $item)
         @php
-            $category= $item->category
+            $category= $item->category;
+
+            $posts = \App\Models\Blog::where('category_id',$category->id)->orderBy('id','desc')->limit($category->limit)->get();
         @endphp
 
 
@@ -53,7 +55,7 @@
                    style="background-color: {{$category->color}}; color:{{$category->text_color}};">
                     <div class="container">
                         <div class="row">
-                            @foreach($category->posts as $post)
+                            @foreach($posts as $post)
                                 <div
                                     class="col-sm-6 d-flex p-4 flex-column justify-content-center align-self-stretch flex-grow-1">
                                     <h4 class="text-uppercase text-decoration-underline fw-bold">
@@ -101,7 +103,7 @@
                     </div>
 
                     <div class="row">
-                        @foreach($category->posts as $post)
+                        @foreach($posts as $post)
                             <div class="col-sm-4">
                                 <div>
                                     <a href="{{route("post.show",['slug'=>$post->slug])}}"
@@ -133,14 +135,16 @@
                         <h4 class="text-decoration-underline text-uppercase">
                             {{$category->name}}
                         </h4>
-                        <a class="text-decoration-none text-dark"  style="background-color: {{$category->color}}; color:{{$category->text_color}};"
+                        <a class="text-decoration-none text-dark"
+                           style="background-color: {{$category->color}}; color:{{$category->text_color}};"
                            href="{{route('category.show',['slug'=>$category->slug])}}">
-                            <p  style="background-color: {{$category->color}}; color:{{$category->text_color}};">See More <i class="fa fa-long-arrow-right"></i></p>
+                            <p style="background-color: {{$category->color}}; color:{{$category->text_color}};">See More
+                                <i class="fa fa-long-arrow-right"></i></p>
                         </a>
                     </div>
 
                     <div class="row">
-                        @foreach($category->posts as $post)
+                        @foreach($posts as $post)
                             <div class="col-sm-3">
                                 <div>
                                     <a href="{{route("post.show",['slug'=>$post->slug])}}"
@@ -148,7 +152,8 @@
                                         <img class="w-100 py-2"
                                              src="{{asset(storage_url($post->avatar))}}"
                                              alt="{{$post->name}}"/>
-                                        <h6 class="fw-bold" style="font-size: 14px; background-color: {{$category->color}}; color:{{$category->text_color}};">
+                                        <h6 class="fw-bold"
+                                            style="font-size: 14px; background-color: {{$category->color}}; color:{{$category->text_color}};">
                                             {{$post->name}}
                                         </h6>
 
@@ -164,8 +169,5 @@
             </section>
 
         @endif
-
     @endforeach
-
-
 @endsection
