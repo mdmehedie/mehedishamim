@@ -49,7 +49,8 @@
         @if($category->limit == 1)
 
             <section class="py-5">
-                <a href="#" class="text-decoration-none text-dark" style="background-color: {{$category->color}}; color:{{$category->text_color}};">
+                <a href="#" class="text-decoration-none text-dark"
+                   style="background-color: {{$category->color}}; color:{{$category->text_color}};">
                     <div class="container">
                         <div class="row">
                             @foreach($category->posts as $post)
@@ -59,7 +60,7 @@
                                         {{$category->name}}
                                     </h4>
                                     <h1 class="fw-bolder"
-                                        style="font-family: Source Serif Pro;font-size: 40px; font-weight: 600; color: black;">
+                                        style="font-family: Source Serif Pro;font-size: 40px; font-weight: 600; color: {{$category->text_color}};">
                                         {{$post->name}}
                                     </h1>
                                     {!! substr(strip_tags($post->description),0, 200) !!}
@@ -108,11 +109,12 @@
                                         <img class="w-100 py-2"
                                              src="{{asset(storage_url($post->avatar))}}"
                                              alt="{{$post->name}}"/>
-                                        <p>
+                                        <p style="background-color: {{$category->color}}; color:{{$category->text_color}};">
                                             {{$post->name}}
                                         </p>
                                     </a>
-                                    <a href="{{route("post.show",['slug'=>$post->slug])}}" type="button"
+                                    <a style="background-color: {{$category->color}}; color:{{$category->text_color}};"
+                                       href="{{route("post.show",['slug'=>$post->slug])}}" type="button"
                                        class="btn btn-outline-dark btn-sm">
                                         Read Post
                                     </a>
@@ -131,9 +133,9 @@
                         <h4 class="text-decoration-underline text-uppercase">
                             {{$category->name}}
                         </h4>
-                        <a class="text-decoration-none text-dark"
+                        <a class="text-decoration-none text-dark"  style="background-color: {{$category->color}}; color:{{$category->text_color}};"
                            href="{{route('category.show',['slug'=>$category->slug])}}">
-                            <p>See More <i class="fa fa-long-arrow-right"></i></p>
+                            <p  style="background-color: {{$category->color}}; color:{{$category->text_color}};">See More <i class="fa fa-long-arrow-right"></i></p>
                         </a>
                     </div>
 
@@ -146,11 +148,11 @@
                                         <img class="w-100 py-2"
                                              src="{{asset(storage_url($post->avatar))}}"
                                              alt="{{$post->name}}"/>
-                                        <h6 class="fw-bold" style="font-size: 14px;">
+                                        <h6 class="fw-bold" style="font-size: 14px; background-color: {{$category->color}}; color:{{$category->text_color}};">
                                             {{$post->name}}
                                         </h6>
 
-                                        <p style="font-size: 11px;">
+                                        <p style="font-size: 11px; background-color: {{$category->color}}; color:{{$category->text_color}};">
                                             {!! substr(strip_tags($post->description),0, 200) !!}
                                         </p>
                                     </a>
