@@ -1,13 +1,11 @@
-@extends('layout.app')
+<?php $__env->startSection('title',"Mehedi Shamim Personal Site"); ?>
 
-@section('title',"Mehedi Shamim Personal Site")
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="container">
         <div class="row my-5">
             <div class="col-sm-6 position-relative">
                 <div class="m-5">
-                    <img src="{{asset(storage_url($home->avatar))}}" alt="{{$home->site_name}}" class="profile"
+                    <img src="<?php echo e(asset(storage_url($home->avatar))); ?>" alt="<?php echo e($home->site_name); ?>" class="profile"
                          style="z-index:4;"/>
                     <div class="profile-bg position-absolute">
                     </div>
@@ -22,7 +20,7 @@
                     Dhaka.</p>
 
                 <div class="d-flex align-items-center">
-                    <a href="{{route('about')}}" class="btn btn-outline-dark w-25 mr-5">Find Out more</a>
+                    <a href="<?php echo e(route('about')); ?>" class="btn btn-outline-dark w-25 mr-5">Find Out more</a>
                     <a href="https://www.facebook.com/mehedishamim" class="px-2"><i class="fab fa-facebook-square fa-2x"
                                                                                     style="color: #1877f2; "></i></a>
                     <a href="https://www.linkedin.com/in/mehedishamim/" class="px-2"><i class="fab fa-linkedin-in fa-2x"
@@ -39,34 +37,37 @@
 
 
 
-    @foreach ($homeCategory as $item)
-        @php
+    <?php $__currentLoopData = $homeCategory; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php
             $category= $item->category
-        @endphp
+        ?>
 
 
 
-        @if($category->limit == 1)
+        <?php if($category->limit == 1): ?>
 
             <section class="py-5">
-                <a href="#" class="text-decoration-none text-dark" style="background-color: {{$category->color}}; color:{{$category->text_color}};">
+                <a href="#" class="text-decoration-none text-dark" style="background-color: <?php echo e($category->color); ?>; color:<?php echo e($category->text_color); ?>;">
                     <div class="container">
                         <div class="row">
-                            @foreach($category->posts as $post)
+                            <?php $__currentLoopData = $category->posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <div
                                     class="col-sm-6 d-flex p-4 flex-column justify-content-center align-self-stretch flex-grow-1">
                                     <h4 class="text-uppercase text-decoration-underline fw-bold">
-                                        {{$category->name}}
+                                        <?php echo e($category->name); ?>
+
                                     </h4>
                                     <h1 class="fw-bolder"
                                         style="font-family: Source Serif Pro;font-size: 40px; font-weight: 600; color: black;">
-                                        {{$post->name}}
+                                        <?php echo e($post->name); ?>
+
                                     </h1>
-                                    {!! substr(strip_tags($post->description),0, 200) !!}
+                                    <?php echo substr(strip_tags($post->description),0, 200); ?>
+
                                     <div class="d-flex text-dark" style="font-size: 12px;">
-                                        <p> By {{$post->user->name}}</p>
+                                        <p> By <?php echo e($post->user->name); ?></p>
                                         <p class="px-2">|</p>
-                                        <p class="px-1 ">{{$post->updated_at->format("M d Y")}}</p>
+                                        <p class="px-1 "><?php echo e($post->updated_at->format("M d Y")); ?></p>
                                     </div>
 
                                 </div>
@@ -74,96 +75,103 @@
                                 <div class="col-sm-6 ">
                                     <div>
                                         <img class="w-100"
-                                             src="{{asset(storage_url($post->avatar))}}"
-                                             alt="{{$post->name}}"/>
+                                             src="<?php echo e(asset(storage_url($post->avatar))); ?>"
+                                             alt="<?php echo e($post->name); ?>"/>
                                     </div>
                                 </div>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                     </div>
                 </a>
             </section>
 
-        @elseif($category->limit == 3)
+        <?php elseif($category->limit == 3): ?>
 
-            <section class="p-4 mt-4" style="background-color: {{$category->color}}; color:{{$category->text_color}};">
+            <section class="p-4 mt-4" style="background-color: <?php echo e($category->color); ?>; color:<?php echo e($category->text_color); ?>;">
                 <div class="container">
                     <div class="d-flex justify-content-between">
                         <h4 class="text-decoration-underline text-uppercase">
-                            {{$category->name}}
+                            <?php echo e($category->name); ?>
+
                         </h4>
 
                         <a class="text-decoration-none text-white"
-                           href="{{route('category.show',['slug'=>$category->slug])}}">
+                           href="<?php echo e(route('category.show',['slug'=>$category->slug])); ?>">
                             <p>See More <i class="fa fa-long-arrow-right"></i></p>
                         </a>
                     </div>
 
                     <div class="row">
-                        @foreach($category->posts as $post)
+                        <?php $__currentLoopData = $category->posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="col-sm-4">
                                 <div>
-                                    <a href="{{route("post.show",['slug'=>$post->slug])}}"
+                                    <a href="<?php echo e(route("post.show",['slug'=>$post->slug])); ?>"
                                        class="text-decoration-none text-dark">
                                         <img class="w-100 py-2"
-                                             src="{{asset(storage_url($post->avatar))}}"
-                                             alt="{{$post->name}}"/>
+                                             src="<?php echo e(asset(storage_url($post->avatar))); ?>"
+                                             alt="<?php echo e($post->name); ?>"/>
                                         <p>
-                                            {{$post->name}}
+                                            <?php echo e($post->name); ?>
+
                                         </p>
                                     </a>
-                                    <a href="{{route("post.show",['slug'=>$post->slug])}}" type="button"
+                                    <a href="<?php echo e(route("post.show",['slug'=>$post->slug])); ?>" type="button"
                                        class="btn btn-outline-dark btn-sm">
                                         Read Post
                                     </a>
                                 </div>
                             </div>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
             </section>
 
-        @elseif($category->limit == 4)
+        <?php elseif($category->limit == 4): ?>
 
-            <section class="p-4 mt-4" style="background-color: {{$category->color}}; color:{{$category->text_color}};">
+            <section class="p-4 mt-4" style="background-color: <?php echo e($category->color); ?>; color:<?php echo e($category->text_color); ?>;">
                 <div class="container">
                     <div class="d-flex justify-content-between">
                         <h4 class="text-decoration-underline text-uppercase">
-                            {{$category->name}}
+                            <?php echo e($category->name); ?>
+
                         </h4>
                         <a class="text-decoration-none text-dark"
-                           href="{{route('category.show',['slug'=>$category->slug])}}">
+                           href="<?php echo e(route('category.show',['slug'=>$category->slug])); ?>">
                             <p>See More <i class="fa fa-long-arrow-right"></i></p>
                         </a>
                     </div>
 
                     <div class="row">
-                        @foreach($category->posts as $post)
+                        <?php $__currentLoopData = $category->posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="col-sm-3">
                                 <div>
-                                    <a href="{{route("post.show",['slug'=>$post->slug])}}"
+                                    <a href="<?php echo e(route("post.show",['slug'=>$post->slug])); ?>"
                                        class="text-decoration-none text-dark">
                                         <img class="w-100 py-2"
-                                             src="{{asset(storage_url($post->avatar))}}"
-                                             alt="{{$post->name}}"/>
+                                             src="<?php echo e(asset(storage_url($post->avatar))); ?>"
+                                             alt="<?php echo e($post->name); ?>"/>
                                         <h6 class="fw-bold" style="font-size: 14px;">
-                                            {{$post->name}}
+                                            <?php echo e($post->name); ?>
+
                                         </h6>
 
                                         <p style="font-size: 11px;">
-                                            {!! substr(strip_tags($post->description),0, 200) !!}
+                                            <?php echo substr(strip_tags($post->description),0, 200); ?>
+
                                         </p>
                                     </a>
                                 </div>
                             </div>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
             </section>
 
-        @endif
+        <?php endif; ?>
 
-    @endforeach
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/shuvo./Documents/MehediSamimProfile/resources/views/home.blade.php ENDPATH**/ ?>

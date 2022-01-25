@@ -24,7 +24,7 @@
                                 <a href="{{route("post.show",['slug'=>$post->slug])}}"
                                    class="text-decoration-none text-white">
                                     <img class="w-100 py-2"
-                                         src="{{asset(\Illuminate\Support\Facades\Storage::url($post->avatar))}}"
+                                         src="{{asset(storage_url($post->avatar))}}"
                                          alt="{{$post->name}}"/>
                                     <p>
                                         {{$post->name}}
@@ -57,7 +57,7 @@
                                 <a href="{{route("post.show",['slug'=>$post->slug])}}"
                                    class="text-decoration-none text-dark">
                                     <img class="w-100 py-2"
-                                         src="{{asset(\Illuminate\Support\Facades\Storage::url($post->avatar))}}"
+                                         src="{{asset(storage_url($post->avatar))}}"
                                          alt="{{$post->name}}"/>
                                     <h6 class="fw-bold" style="font-size: 14px;">{{$post->name}}</h6>
 

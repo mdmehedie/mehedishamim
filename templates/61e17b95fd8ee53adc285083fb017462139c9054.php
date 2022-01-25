@@ -65,7 +65,7 @@
                                 <a href="<?php echo e(route("post.show",['slug'=>$post->slug])); ?>"
                                    class="text-decoration-none text-dark fw-bold">
                                     <img class="w-100 py-2"
-                                         src="<?php echo e(asset(\Illuminate\Support\Facades\Storage::url($post->avatar))); ?>"
+                                         src="<?php echo e(asset(storage_url($post->avatar))); ?>"
                                          alt="<?php echo e($post->name); ?>"/>
                                     <p>
                                         <?php echo e($post->name); ?>

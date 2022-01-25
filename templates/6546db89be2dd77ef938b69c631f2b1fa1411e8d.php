@@ -14,7 +14,7 @@
 
             <div class="col-sm-6 d-flex flex-column justify-content-center align-self-stretch flex-grow-1">
                 <h1 class="fw-bolder">Mehedi Shamim</h1>
-                <p class="lead">Having a long time of voluntary working experience in INGOs, Mehedi has worked for Media, 
+                <p class="lead">Having a long time of voluntary working experience in INGOs, Mehedi has worked for Media,
                     Startup, RMG Industry, Group of Companies, and eCommerce and owned a digital marketing agency in Dhaka.</p>
 
                 <div class="d-flex align-items-center">
@@ -73,7 +73,7 @@
                                 <div class="col-sm-6 ">
                                     <div>
                                         <img class="w-100"
-                                             src="<?php echo e(asset(\Illuminate\Support\Facades\Storage::url($post->avatar))); ?>"
+                                             src="<?php echo e(asset(storage_url($post->avatar))); ?>"
                                              alt="<?php echo e($post->name); ?>"/>
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@
                                     <a href="<?php echo e(route("post.show",['slug'=>$post->slug])); ?>"
                                        class="text-decoration-none text-dark">
                                         <img class="w-100 py-2"
-                                             src="<?php echo e(asset(\Illuminate\Support\Facades\Storage::url($post->avatar))); ?>"
+                                             src="<?php echo e(asset(storage_url($post->avatar))); ?>"
                                              alt="<?php echo e($post->name); ?>"/>
                                         <p>
                                             <?php echo e($post->name); ?>
@@ -146,7 +146,7 @@
                                     <a href="<?php echo e(route("post.show",['slug'=>$post->slug])); ?>"
                                        class="text-decoration-none text-dark">
                                         <img class="w-100 py-2"
-                                             src="<?php echo e(asset(\Illuminate\Support\Facades\Storage::url($post->avatar))); ?>"
+                                             src="<?php echo e(asset(storage_url($post->avatar))); ?>"
                                              alt="<?php echo e($post->name); ?>"/>
                                         <h6 class="fw-bold" style="font-size: 14px;">
                                             <?php echo e($post->name); ?>

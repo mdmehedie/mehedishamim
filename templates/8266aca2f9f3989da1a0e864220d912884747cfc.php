@@ -19,7 +19,7 @@
                     <div>
                         <?php if($post->type=='photo'): ?>
                             <img class="w-100"
-                                 src="<?php echo e(asset(\Illuminate\Support\Facades\Storage::url($post->avatar))); ?>"
+                                 src="<?php echo e(asset(storage_url($post->avatar))); ?>"
                                  alt="<?php echo e($post->name); ?>">
                         <?php else: ?>
                             <div class="embed-responsive embed-responsive-1by1 vid">
@@ -62,7 +62,7 @@
                                     <a href="<?php echo e(route('post.show',['slug'=>$item->slug])); ?>"
                                        class="text-decoration-none text-dark">
                                         <img class="w-100 py-2"
-                                             src="<?php echo e(asset(\Illuminate\Support\Facades\Storage::url($item->avatar))); ?>"
+                                             src="<?php echo e(asset(storage_url($item->avatar))); ?>"
                                              alt="<?php echo e($item->name); ?>"/>
                                         <h6 class="fw-bold" style="font-size: 14px;">
                                             <?php echo e($item->name); ?>

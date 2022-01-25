@@ -80,4 +80,4 @@
     <?php endif; ?>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layout.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/tailydcr/texon.mehedishamim.com_/resources/views/single-category.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layout.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/shuvo./Documents/MehediSamimProfile/resources/views/single-category.blade.php ENDPATH**/ ?>

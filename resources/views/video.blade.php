@@ -64,7 +64,7 @@
                                 <a href="{{route("post.show",['slug'=>$post->slug])}}"
                                    class="text-decoration-none text-dark fw-bold">
                                     <img class="w-100 py-2"
-                                         src="{{asset(\Illuminate\Support\Facades\Storage::url($post->avatar))}}"
+                                         src="{{asset(storage_url($post->avatar))}}"
                                          alt="{{$post->name}}"/>
                                     <p>
                                         {{$post->name}}
