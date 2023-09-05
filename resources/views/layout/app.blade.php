@@ -1,7 +1,6 @@
-<?php
-if (app()->environment() === 'production' && $_SERVER['HTTP_HOST'] != "mehedishamim.com")
-    die("Contact with Shuvo | 01749076238");
-?>
+{{--if (app()->environment() === 'production' && $_SERVER['HTTP_HOST'] != "mehedishamim.com")--}}
+{{--    die("Contact with Shuvo | 01749076238");--}}
+{{----}}
 
 
 <html>

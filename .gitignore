@@ -13,4 +13,4 @@ yarn-error.log
 composer.lock
 package-lock.json
 config/filesystems.php
-template/*
+/template
